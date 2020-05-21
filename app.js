@@ -71,9 +71,7 @@ app.get('/register', (req, res) => {
 });
 
 app.post('/register', (req, res) => {
-    console.log('work register');
     let inputUser = req.body;
-    console.log(inputUser);
 
     const validUser = users.some((user) =>
         user.email === inputUser.email
@@ -87,13 +85,13 @@ app.post('/register', (req, res) => {
     }
     else {
         users.push(inputUser);
-        console.log('-------------');
-        console.log(inputUser);
         res.redirect('/')
     }
 
 
 });
+
+/*      ---------       */
 
 
 
