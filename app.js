@@ -77,11 +77,11 @@ app.post('/register', (req, res) => {
         user.email === inputUser.email
 
     );
-    console.log(validUser);
+
 
     if (validUser){
         res.render('register', {message: 'Your e-mail registered. Please log in'});
-        console.log('err')
+
     }
     else {
         users.push(inputUser);
